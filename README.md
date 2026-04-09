@@ -22,7 +22,7 @@ npx skills add sitefire-ai/skills
 
 On first use, a browser window opens where you sign in to your Sitefire account and approve access.
 
-For alternative setup methods (Claude.ai, Claude Desktop, manual MCP config), see the [full documentation](https://sitefire.ai/docs/mcp).
+For alternative setup methods (Claude.ai, Claude Desktop, manual MCP config), see the [full documentation](https://docs.sitefire.ai/docs/mcp).
 
 ## Usage
 
