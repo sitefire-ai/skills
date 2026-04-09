@@ -17,7 +17,7 @@ Works with **Claude Code**, **Codex**, **Cursor**, **Gemini CLI**, and any agent
 ## Installation
 
 ```bash
-npx skills add sitefire/skills
+npx skills add sitefire-ai/skills
 ```
 
 On first use, a browser window opens where you sign in to your Sitefire account and approve access.
