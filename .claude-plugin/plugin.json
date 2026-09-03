@@ -1,5 +1,6 @@
 {
   "name": "sitefire",
+  "version": "0.2.0",
   "description": "Sitefire AI visibility analytics — MCP integration, product knowledge, and workflow commands for AI coding agents",
   "author": {
     "name": "Sitefire",
