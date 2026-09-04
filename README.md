@@ -13,6 +13,8 @@ Works with **Claude Code**, **Codex**, **Cursor**, **Gemini CLI**, and any agent
 | **`/sitefire-actions`** | Check existing actions and execute ready briefings |
 | **`/sitefire-discover`** | Analyze visibility data and find new topics to work on |
 | **`/sitefire-write-all`** | Trigger article generation for all ready briefings at once |
+| **`/sitefire-traces`** | Read an agent run: its output, the files each agent wrote, the dispatch tree, and the step where a shortfall entered |
+| **`/sitefire-improve-agent`** | Improve an agent from its runs: find the failure mode, edit the configuration draft, publish a revision with a note |
 
 ## Installation
 
@@ -36,10 +38,26 @@ Once installed, your agent automatically has access to your Sitefire data. Just 
 Or use the slash commands:
 
 ```
-/sitefire-actions     # Review and execute ready actions
-/sitefire-discover    # Analyze data and find new topics
-/sitefire-write-all   # Batch-trigger article generation
+/sitefire-actions        # Review and execute ready actions
+/sitefire-discover       # Analyze data and find new topics
+/sitefire-write-all      # Batch-trigger article generation
+/sitefire-traces         # Read an agent run end to end
+/sitefire-improve-agent  # Improve an agent from its runs
 ```
+
+## Agent runs and configuration
+
+If your workspace has a Sitefire agent runtime connected, the MCP server adds
+two tool families.
+
+| Family | Tools | What it does |
+|--------|-------|--------------|
+| `*_agent_run*` | `list_agent_runs`, `get_agent_run`, `get_agent_run_step`, `get_agent_run_file` | Read what a run did: its final message, the dispatch tree, the file timeline, and each pass over a file |
+| `*_agent_config` | `get_agent_config`, `read_agent_config`, `diff_agent_config`, `edit_agent_config`, `publish_agent_config` | Read and change what the agents are told, then publish a revision with a note |
+
+The `/sitefire-traces` and `/sitefire-improve-agent` skills drive these tools.
+Read the run first, then change one layer, then publish. Claude always asks
+before it publishes.
 
 ## How it works
 
