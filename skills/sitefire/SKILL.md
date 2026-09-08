@@ -1,6 +1,6 @@
 ---
 name: sitefire
-description: Sitefire AI visibility analytics — product knowledge and workflow guidance for working with Sitefire's MCP tools. Triggers when users ask about AI visibility, brand mentions in AI answers, topic actions, briefings, or content generation through Sitefire.
+description: Sitefire AI visibility analytics — product knowledge and workflow guidance for working with Sitefire's MCP tools. Triggers when users ask about AI visibility, brand mentions in AI answers, prompt research and monitoring setup, topic actions, briefings, or content generation through Sitefire.
 ---
 
 # Sitefire Product Knowledge
@@ -11,6 +11,7 @@ description: Sitefire AI visibility analytics — product knowledge and workflow
 - User wants to create, manage, or execute Sitefire actions
 - User asks about competitive positioning across AI models
 - User wants to write content based on Sitefire briefings
+- User wants to research or manage monitored prompts: use `sitefire-prompts`
 - User mentions topics, actions, briefings, or articles in a Sitefire context
 
 ## What is Sitefire?
@@ -25,7 +26,7 @@ Sitefire is the System of Record for AI visibility. It tracks how AI models (Cha
 ## Key Concepts
 
 ### Topics
-Topics are keywords monitored across AI models. Each topic has:
+A topic groups full customer questions (prompts) that Sitefire sends to AI models. For research, coverage, evidence sources, and editing guidance, use `sitefire-prompts` and the [MCP guide](https://sitefire.ai/docs/mcp#manage-prompts-and-topics). Each topic has:
 - A visibility score (how often the brand appears in AI answers)
 - A citation rate (how often the brand is cited as a source)
 - A competitive position (winning, losing, competitive, or untapped)
