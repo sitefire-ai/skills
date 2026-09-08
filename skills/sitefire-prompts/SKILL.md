@@ -1,6 +1,6 @@
 ---
 name: sitefire-prompts
-description: Research, add, organize, and clean up monitored Sitefire prompts and topics. Use for questions about what to track, exact monitored questions, tags, prompt status, or deliberate persona experiments. Use sitefire-discover for content-action opportunities from visibility data.
+description: Research, add, organize, and clean up monitored Sitefire prompts and topics. Use to decide what to track, consolidate topics, deduplicate or improve questions, retire irrelevant monitoring, manage tags/status, or run deliberate persona experiments. Use sitefire-discover for content-action opportunities from visibility data.
 ---
 
 # Manage Sitefire prompts
@@ -15,6 +15,6 @@ Choose a coherent set of useful questions, accounting for ready and pending cove
 
 When the user supplies exact customer questions, use manual `add_prompts`. Keep their wording and distinguish supplied evidence from proposed questions. Do not imply that research accessed CRM records or call notes unless those sources were actually provided or read. `add_topics` is the quick-generation alternative for known subjects; its existing-topic default skips. Request an explicit increment only when more questions are intended.
 
-For cleanup, resolve the user's selection to exact IDs, then apply bounded `update_prompts` batches. Use `manage_tags` for label definitions. Topic renaming through `update_topics` changes the search-volume basis; prefer a tag for an internal label. Stop topic monitoring by archiving its prompts. Use experimental `manage_personas` only when requested, following its delete preview and confirmation contract.
+For topic consolidation, duplicate review, wording improvements, or retiring irrelevant monitoring, read [the cleanup workflows](references/cleanup.md). Use `manage_tags` for label definitions. Topic renaming through `update_topics` changes the search-volume basis; prefer a tag for an internal label. Stop topic monitoring by archiving its prompts. Use experimental `manage_personas` only when requested, following its delete preview and confirmation contract.
 
-Keep each mutation's `request_id` and submitted input unchanged on retry. A new identity means new intent. Do not turn a conflict, failed generation, or unknown tracking overlay into an automatic new batch. Inspect the returned state and take the tool's recovery path. Re-read saved prompt IDs to verify texts, topics, states, and assignments; report pending work separately from completed changes.
+A preview does not consume its request identity: apply the reviewed business changes with the same `request_id` and `dry_run: false`. Keep that applied input and identity unchanged when retrying an uncertain apply. A new identity means new intent. Do not turn a conflict, failed generation, or unknown tracking overlay into an automatic new batch. Inspect the returned state and take the tool's recovery path. Re-read saved prompt IDs to verify texts, topics, states, and assignments; report pending work separately from completed changes.
