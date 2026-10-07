@@ -1,8 +1,8 @@
 {
   "name": "sitefire",
   "displayName": "Sitefire",
-  "version": "1.0.1",
-  "description": "Sitefire AI visibility analytics: see how ChatGPT, Gemini, Perplexity and Google AI mention your brand, manage monitored prompts and topics, and act on content briefings from your agent.",
+  "version": "1.0.2",
+  "description": "Sitefire AI search visibility analytics: see how AI answer engines mention and cite your brand, manage the questions and topics Sitefire monitors, and act on content briefings from your agent.",
   "author": {
     "name": "Sitefire",
     "email": "support@sitefire.ai",
@@ -11,7 +11,14 @@
   "homepage": "https://docs.sitefire.ai/docs/mcp",
   "repository": "https://github.com/sitefire-ai/skills",
   "license": "MIT",
-  "keywords": ["ai-visibility", "geo", "seo", "brand-monitoring", "content", "analytics"],
+  "keywords": [
+    "ai-visibility",
+    "geo",
+    "seo",
+    "brand-monitoring",
+    "content",
+    "analytics"
+  ],
   "icon": "./assets/icon.png",
   "documentationUrl": "https://docs.sitefire.ai/docs/mcp",
   "supportUrl": "https://sitefire.ai/contact",
