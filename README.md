@@ -19,11 +19,20 @@ Works with **Claude Code**, **Codex**, **Cursor**, **Gemini CLI**, and any agent
 
 ## Installation
 
+**Claude Code:** add the repository as a marketplace, then install the plugin.
+
+```bash
+claude plugin marketplace add sitefire-ai/skills
+claude plugin install sitefire@sitefire
+```
+
+**Other agents (Codex, Cursor, Gemini CLI):** install the skills with the Agent Skills CLI.
+
 ```bash
 npx skills add sitefire-ai/skills
 ```
 
-On first use, a browser window opens where you sign in to your Sitefire account and approve access.
+On first use, a browser window opens. Sign in to your Sitefire account and approve access.
 
 For alternative setup methods (Claude.ai, Claude Desktop, manual MCP config), see the [full documentation](https://sitefire.ai/docs/mcp).
 
@@ -59,7 +68,7 @@ two tool families.
 | `*_agent_config` | `get_agent_config`, `read_agent_config`, `diff_agent_config`, `edit_agent_config`, `publish_agent_config` | Read and change what the agents are told, then publish a revision with a note |
 
 The `/sitefire-traces` and `/sitefire-improve-agent` skills drive these tools.
-Read the run first, then change one layer, then publish. Claude always asks
+Read the run first, then change one layer, then publish. The agent always asks
 before it publishes.
 
 ## How it works
@@ -76,3 +85,37 @@ This plugin gives your agent the context to navigate these workflows fluently: i
 ## Prompt management
 
 Use `/sitefire-prompts` for research and monitoring setup. The [MCP guide](https://sitefire.ai/docs/mcp#manage-prompts-and-topics) explains topics versus prompts, evidence sources, optional personas, and safe editing. The connected server supplies current tool contracts; the skill adds workflow guidance rather than a second API reference.
+
+## Data and privacy
+
+This plugin contains Markdown skills and one MCP server entry. It has no hooks, no scripts, and no local executables. It does not read files on your computer and it does not send telemetry.
+
+**What it connects to.** The plugin connects to one remote MCP server: `https://app.sitefire.ai/api/mcp`. Sitefire operates this server. The connection uses HTTPS and OAuth 2.1 with PKCE. You sign in with your Sitefire account. Your agent stores the access token. The plugin files contain no credentials.
+
+**What it sends.** When your agent calls a Sitefire tool, it sends only the arguments of that call. Examples are a topic, a date range, a filter, or the text of a monitored question. The plugin does not send your conversation history.
+
+**What it reads.** The tools return data from your Sitefire workspace: visibility metrics, topics, prompts, actions, briefings, articles, and agent runs. Your role in the workspace controls what you can read.
+
+**What it can change.** Workspace admins can use tools that change data in Sitefire:
+
+| Tool | Effect |
+|------|--------|
+| `create_action`, `add_competitor` | Creates an action or a competitor entry |
+| `write_article`, `run_agent` | Starts a Sitefire agent run that uses workspace credits |
+| `start_prompt_research`, `add_prompts`, `add_topics` | Starts prompt research, or adds monitored prompts and topics |
+| `update_prompts`, `update_topics`, `manage_tags`, `manage_personas` | Edits or archives prompts, topics, tags, and personas |
+| `edit_agent_config`, `publish_agent_config` | Edits an agent configuration draft and publishes a revision |
+
+The skills tell the agent to change data only when you ask for the change or approve a proposed change. Publishing an agent configuration always needs your explicit approval in the conversation. Viewers can only read.
+
+**Where the data goes.** Sitefire processes the data as described in the [Sitefire privacy policy](https://sitefire.ai/data-privacy). The [terms of service](https://sitefire.ai/terms) apply. Your AI client processes tool results under the terms of that client.
+
+## Support
+
+- Documentation: [docs.sitefire.ai/docs/mcp](https://docs.sitefire.ai/docs/mcp)
+- Contact: [sitefire.ai/contact](https://sitefire.ai/contact) or support@sitefire.ai
+- Security reports: support@sitefire.ai
+
+## License
+
+[MIT](LICENSE)
