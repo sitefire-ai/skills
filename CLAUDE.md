@@ -2,7 +2,7 @@
 
 Sitefire is the System of Record for AI visibility. It monitors how AI models (ChatGPT, Gemini, Perplexity, DeepSeek, Google AI) mention and cite your brand across tracked topics, and provides actionable intelligence to improve your presence.
 
-This plugin connects your AI agent to your Sitefire account via MCP. You can analyze your AI visibility, manage actions, and execute content workflows directly from your terminal.
+This plugin connects your AI agent to your Sitefire account via MCP. You can analyze your AI visibility, manage monitored prompts and actions, and execute content workflows directly from your terminal.
 
 ## Domain Model
 
@@ -26,6 +26,10 @@ This plugin connects your AI agent to your Sitefire account via MCP. You can ana
 2. **Diagnosis runs** (2-5 min) — Sitefire's AI analyzes the competitive landscape and determines the best approach
 3. **Briefing generated** (1-3 min) — the action becomes executable
 4. **For CREATE_CONTENT only**: article generation can be triggered (5-15 min)
+
+## Prompt management
+
+Use `sitefire-prompts` for research and monitoring setup. Follow the [MCP guide](https://sitefire.ai/docs/mcp#manage-prompts-and-topics) and connected server instructions for the product model and current tool contracts. Use `sitefire-discover` for content-action opportunities from visibility data.
 
 ## Two Operating Modes
 

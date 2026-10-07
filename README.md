@@ -1,6 +1,6 @@
 # Sitefire Agent Plugin
 
-Connect your AI coding agent to your [Sitefire](https://sitefire.ai) account for AI visibility analytics, action management, and content workflows — directly from your terminal or IDE.
+Connect your AI coding agent to your [Sitefire](https://sitefire.ai) account for AI visibility analytics, prompt management, and content workflows — directly from your terminal or IDE.
 
 Works with **Claude Code**, **Codex**, **Cursor**, **Gemini CLI**, and any agent that supports the [Agent Skills](https://github.com/anthropics/skills) spec or remote MCP servers.
 
@@ -10,6 +10,7 @@ Works with **Claude Code**, **Codex**, **Cursor**, **Gemini CLI**, and any agent
 |-----------|---------|
 | **MCP Server** | Auto-connects your agent to Sitefire's API (OAuth, no setup needed) |
 | **Product Knowledge** | Your agent understands Sitefire's domain model, workflows, and terminology |
+| **`/sitefire-prompts`** | Research, add, organize, and clean up monitored questions and topics |
 | **`/sitefire-actions`** | Check existing actions and execute ready briefings |
 | **`/sitefire-discover`** | Analyze visibility data and find new topics to work on |
 | **`/sitefire-write-all`** | Trigger article generation for all ready briefings at once |
@@ -24,12 +25,13 @@ npx skills add sitefire-ai/skills
 
 On first use, a browser window opens where you sign in to your Sitefire account and approve access.
 
-For alternative setup methods (Claude.ai, Claude Desktop, manual MCP config), see the [full documentation](https://docs.sitefire.ai/docs/mcp).
+For alternative setup methods (Claude.ai, Claude Desktop, manual MCP config), see the [full documentation](https://sitefire.ai/docs/mcp).
 
 ## Usage
 
 Once installed, your agent automatically has access to your Sitefire data. Just ask:
 
+- "What should we track, and which prompts need cleanup?" — researches and manages monitoring
 - "How is our AI visibility?" — runs analytics overview
 - "What actions do we have?" — lists existing actions with briefing status
 - "What articles can we write?" — finds ready CREATE_CONTENT actions
@@ -38,6 +40,7 @@ Once installed, your agent automatically has access to your Sitefire data. Just 
 Or use the slash commands:
 
 ```
+/sitefire-prompts        # Research and manage monitored prompts
 /sitefire-actions        # Review and execute ready actions
 /sitefire-discover       # Analyze data and find new topics
 /sitefire-write-all      # Batch-trigger article generation
@@ -69,3 +72,7 @@ This plugin gives your agent the context to navigate these workflows fluently: i
 
 - A Sitefire account at [app.sitefire.ai](https://app.sitefire.ai)
 - An AI coding agent that supports [Agent Skills](https://github.com/anthropics/skills) or remote MCP servers
+
+## Prompt management
+
+Use `/sitefire-prompts` for research and monitoring setup. The [MCP guide](https://sitefire.ai/docs/mcp#manage-prompts-and-topics) explains topics versus prompts, evidence sources, optional personas, and safe editing. The connected server supplies current tool contracts; the skill adds workflow guidance rather than a second API reference.
