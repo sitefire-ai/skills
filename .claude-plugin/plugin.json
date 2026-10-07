@@ -1,9 +1,21 @@
 {
   "name": "sitefire",
-  "version": "0.3.0",
-  "description": "Sitefire AI visibility analytics and prompt management — MCP integration, product knowledge, and workflow commands for AI coding agents",
+  "displayName": "Sitefire",
+  "version": "1.0.0",
+  "description": "Sitefire AI visibility analytics: see how ChatGPT, Gemini, Perplexity and Google AI mention your brand, manage monitored prompts and topics, and act on content briefings from your agent.",
   "author": {
     "name": "Sitefire",
-    "email": "support@sitefire.ai"
-  }
+    "email": "support@sitefire.ai",
+    "url": "https://sitefire.ai"
+  },
+  "homepage": "https://docs.sitefire.ai/docs/mcp",
+  "repository": "https://github.com/sitefire-ai/skills",
+  "license": "MIT",
+  "keywords": ["ai-visibility", "geo", "seo", "brand-monitoring", "content", "analytics"],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://docs.sitefire.ai/docs/mcp",
+  "supportUrl": "https://sitefire.ai/contact",
+  "privacyPolicyUrl": "https://sitefire.ai/data-privacy",
+  "termsOfServiceUrl": "https://sitefire.ai/terms",
+  "mcpServers": "./.mcp.json"
 }
