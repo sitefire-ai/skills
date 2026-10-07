@@ -1,7 +1,6 @@
 ---
 name: sitefire-improve-agent
 description: Improve a Sitefire agent by reading its runs, finding the failure mode, editing the configuration draft, and publishing a revision with a note. Use this skill whenever the user wants an agent to write better, says the output is thin, generic, off-tone, off-structure, or factually wrong, says outputs got worse, or asks to change an agent's instructions, model, skill, or context files. Use it for "fix the writer", "the agent keeps ignoring the briefing", "tune Jerry", "edit the agent prompt", "publish a new revision", or "why did quality drop". Run the whole loop, because a change without the trace evidence and without the user's pick is a guess.
-allowed-tools: mcp__plugin_sitefire_sitefire__list_agent_runs, mcp__plugin_sitefire_sitefire__get_agent_run, mcp__plugin_sitefire_sitefire__get_agent_run_step, mcp__plugin_sitefire_sitefire__get_agent_run_file, mcp__plugin_sitefire_sitefire__get_agent_config, mcp__plugin_sitefire_sitefire__read_agent_config, mcp__plugin_sitefire_sitefire__diff_agent_config, mcp__plugin_sitefire_sitefire__edit_agent_config, mcp__plugin_sitefire_sitefire__publish_agent_config, AskUserQuestion
 ---
 
 # Improve a Sitefire agent

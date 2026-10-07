@@ -1,7 +1,6 @@
 ---
 name: sitefire-traces
 description: Read a Sitefire agent run end to end — the output it produced, the files each agent wrote, the dispatch tree, and the step where a shortfall entered. Use this skill whenever the user talks about an agent run, a trace, a Jerry run, a run id, a session, or says things like "the output of that run is not good enough", "why did the agent write this", "which agent wrote this file", "what did the subagent get", "outputs got worse since last week", or "compare this run with the good one". Use it before you guess at a cause, because the run story names the agent, the pass, and the revision that produced the output.
-allowed-tools: mcp__plugin_sitefire_sitefire__list_agent_runs, mcp__plugin_sitefire_sitefire__get_agent_run, mcp__plugin_sitefire_sitefire__get_agent_run_step, mcp__plugin_sitefire_sitefire__get_agent_run_file, mcp__plugin_sitefire_sitefire__diff_agent_config, mcp__plugin_sitefire_sitefire__get_agent_config
 ---
 
 # Read a Sitefire agent run
