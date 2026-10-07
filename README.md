@@ -101,9 +101,10 @@ This plugin contains Markdown skills and one MCP server entry. It has no hooks, 
 | Tool | Effect |
 |------|--------|
 | `create_action`, `add_competitor` | Creates an action or a competitor entry |
-| `write_article`, `run_agent` | Starts a Sitefire agent run that uses workspace credits |
+| `write_article` | Starts a Sitefire article run that uses workspace credits |
 | `start_prompt_research`, `add_prompts`, `add_topics` | Starts prompt research, or adds monitored prompts and topics |
-| `update_prompts`, `update_topics`, `manage_tags`, `manage_personas` | Edits or archives prompts, topics, tags, and personas |
+| `create_tags`, `create_personas` | Creates tags and personas |
+| `update_prompts`, `update_topics`, `update_tags`, `retire_tags`, `update_personas`, `delete_personas` | Edits, archives, retires, or deletes prompts, topics, tags, and personas |
 | `edit_agent_config`, `publish_agent_config` | Edits an agent configuration draft and publishes a revision |
 
 The skills tell the agent to change data only when you ask for the change or approve a proposed change. Publishing an agent configuration always needs your explicit approval in the conversation. Viewers can only read.
