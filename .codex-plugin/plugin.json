@@ -1,7 +1,7 @@
 {
   "name": "sitefire",
-  "version": "1.0.1",
-  "description": "Sitefire AI visibility analytics: see how ChatGPT, Gemini, Perplexity and Google AI mention your brand, manage monitored prompts and topics, and act on content briefings from your agent.",
+  "version": "1.0.2",
+  "description": "Sitefire AI search visibility analytics: see how AI answer engines mention and cite your brand, manage the questions and topics Sitefire monitors, and act on content briefings from your agent.",
   "author": {
     "name": "Sitefire",
     "email": "support@sitefire.ai",
@@ -10,13 +10,20 @@
   "homepage": "https://docs.sitefire.ai/docs/mcp",
   "repository": "https://github.com/sitefire-ai/skills",
   "license": "MIT",
-  "keywords": ["ai-visibility", "geo", "seo", "brand-monitoring", "content", "analytics"],
+  "keywords": [
+    "ai-visibility",
+    "geo",
+    "seo",
+    "brand-monitoring",
+    "content",
+    "analytics"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Sitefire",
     "shortDescription": "AI visibility for your brand",
-    "longDescription": "Sitefire measures how AI answer engines such as ChatGPT, Gemini, Perplexity, and Google AI Mode mention and cite your brand. Connect your Sitefire account to ask about your visibility score, trends, citation rate, and competitor ranking; see which topics you win or lose and which of your pages AI models cite; and manage the questions and topics that Sitefire monitors.\n\nSitefire also turns gaps into actions. Each action gets a briefing from Sitefire's analysis agents, with a content outline, page improvements, outreach drafts, or forum posts. You can review briefings, start article generation, and inspect or tune the agents that do the work.\n\nIntended for marketing, SEO, and content teams with a Sitefire account. You see only the workspace data that your account can access. Viewers can read; changing data needs the workspace admin role.",
+    "longDescription": "Sitefire is an AI search visibility platform for marketing, SEO, and content teams. It measures how often AI answer engines mention and cite your brand for the questions your customers ask.\n\nConnect your Sitefire account to ask about your visibility score, trends, citation rate, and competitor ranking; to see which topics you win or lose and which of your pages AI answers cite; and to manage the questions and topics that Sitefire monitors.\n\nSitefire also turns gaps into actions. Each action gets a briefing from Sitefire's analysis agents, with a content outline, page improvements, outreach drafts, or forum posts. You can review briefings, start article generation, and inspect or tune the agents that do the work.\n\nYou see only the workspace data that your Sitefire account can access. Viewers can read; changing data needs the workspace admin role.",
     "developerName": "Sitefire",
     "category": "Productivity",
     "capabilities": [
@@ -91,7 +98,7 @@
           ]
         },
         "commerce": false,
-        "commerce_description": "Sitefire does not sell products or process payments in ChatGPT or Codex."
+        "commerce_description": "Sitefire does not sell products or process payments through this plugin."
       },
       "publication": {
         "release_notes": "Initial release: AI visibility analytics, prompt and topic management, action briefings, article generation, and agent run inspection."
