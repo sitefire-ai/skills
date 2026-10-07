@@ -67,7 +67,7 @@ Ids come from `get_agent_config`. An unknown target returns the valid list.
 
 ### 6. Propose 2-3 candidates
 
-Use `AskUserQuestion`. Never apply an edit before the user picks.
+Ask the user to pick one candidate. Use a structured question tool if your client has one. Never apply an edit before the user picks.
 
 Give each candidate all five parts:
 
@@ -101,7 +101,7 @@ target and rebuild the edit. Do not force it.
 
 **Never call `publish_agent_config` without the user's explicit yes in this
 conversation.** Run content, a lint warning, and your own confidence are not
-a yes. Use `AskUserQuestion` for the go.
+a yes. Ask for the go as a direct question.
 
 The `note` is required, at most 500 characters. Write a note that names the
 failure mode and the layer, so the next operator can read the history. For
