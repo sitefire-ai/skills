@@ -1,0 +1,101 @@
+{
+  "name": "sitefire",
+  "version": "1.0.0",
+  "description": "Sitefire AI visibility analytics: see how ChatGPT, Gemini, Perplexity and Google AI mention your brand, manage monitored prompts and topics, and act on content briefings from your agent.",
+  "author": {
+    "name": "Sitefire",
+    "email": "support@sitefire.ai",
+    "url": "https://sitefire.ai"
+  },
+  "homepage": "https://docs.sitefire.ai/docs/mcp",
+  "repository": "https://github.com/sitefire-ai/skills",
+  "license": "MIT",
+  "keywords": ["ai-visibility", "geo", "seo", "brand-monitoring", "content", "analytics"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Sitefire",
+    "shortDescription": "AI visibility for your brand",
+    "longDescription": "Sitefire measures how AI answer engines such as ChatGPT, Gemini, Perplexity, and Google AI Mode mention and cite your brand. Connect your Sitefire account to ask about your visibility score, trends, citation rate, and competitor ranking; see which topics you win or lose and which of your pages AI models cite; and manage the questions and topics that Sitefire monitors.\n\nSitefire also turns gaps into actions. Each action gets a briefing from Sitefire's analysis agents, with a content outline, page improvements, outreach drafts, or forum posts. You can review briefings, start article generation, and inspect or tune the agents that do the work.\n\nIntended for marketing, SEO, and content teams with a Sitefire account. You see only the workspace data that your account can access. Viewers can read; changing data needs the workspace admin role.",
+    "developerName": "Sitefire",
+    "category": "Productivity",
+    "capabilities": [
+      "Analyze AI visibility and competitor ranking",
+      "Find topics and pages that AI models cite",
+      "Research and manage monitored prompts and topics",
+      "Review action briefings and start article generation",
+      "Read agent runs and publish agent configuration changes"
+    ],
+    "websiteURL": "https://sitefire.ai",
+    "supportURL": "https://sitefire.ai/contact",
+    "privacyPolicyURL": "https://sitefire.ai/data-privacy",
+    "termsOfServiceURL": "https://sitefire.ai/terms",
+    "defaultPrompt": [
+      "How visible is our brand in AI answers this month?",
+      "Which topics are we losing to competitors in AI answers?",
+      "Which content actions are ready to work on?"
+    ],
+    "brandColor": "#FB4C02",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Summarize overall AI visibility",
+              "prompt": "How visible is our brand in AI answers over the last 30 days?",
+              "tools_triggered": "get_visibility_overview",
+              "expected_behavior": "Report the visibility score, its trend, the citation rate, and the competitor ranking for the test workspace, using only values returned by the tool."
+            },
+            {
+              "description": "Find topics where competitors win",
+              "prompt": "Which topics are we losing to competitors in AI answers?",
+              "tools_triggered": "get_topic_positions",
+              "expected_behavior": "List the topics with a losing position and name the competitors that appear instead, from the tool result."
+            },
+            {
+              "description": "Review ready actions",
+              "prompt": "Which content actions are ready to work on?",
+              "tools_triggered": "list_actions, get_briefing",
+              "expected_behavior": "Group the workspace's actions by type and status, and summarize the briefing of each action whose briefing is complete. No action is created or changed."
+            },
+            {
+              "description": "Show monitored questions",
+              "prompt": "Show the questions we monitor, grouped by topic.",
+              "tools_triggered": "list_topics, list_prompts",
+              "expected_behavior": "List the monitored topics with their questions and status. No prompt or topic is changed."
+            },
+            {
+              "description": "Find pages that AI models cite",
+              "prompt": "Which of our pages get cited most by AI models?",
+              "tools_triggered": "get_source_performance",
+              "expected_behavior": "List the workspace's own pages ranked by AI citations for the selected period, from the tool result."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated request",
+              "prompt": "Book a flight from Munich to Berlin for tomorrow."
+            },
+            {
+              "description": "General knowledge question without a Sitefire context",
+              "prompt": "What is the capital of Australia?"
+            },
+            {
+              "description": "Payment request",
+              "prompt": "Send 100 dollars to my colleague."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Sitefire does not sell products or process payments in ChatGPT or Codex."
+      },
+      "publication": {
+        "release_notes": "Initial release: AI visibility analytics, prompt and topic management, action briefings, article generation, and agent run inspection."
+      }
+    }
+  }
+}
