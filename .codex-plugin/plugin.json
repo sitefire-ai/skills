@@ -25,7 +25,7 @@
     "shortDescription": "AI visibility for your brand",
     "longDescription": "Sitefire is an AI search visibility platform for marketing, SEO, and content teams. It measures how often AI answer engines mention and cite your brand for the questions your customers ask.\n\nConnect your Sitefire account to ask about your visibility score, trends, citation rate, and competitor ranking; to see which topics you win or lose and which of your pages AI answers cite; and to manage the questions and topics that Sitefire monitors.\n\nSitefire also turns gaps into actions. Each action gets a briefing from Sitefire's analysis agents, with a content outline, page improvements, outreach drafts, or forum posts. You can review briefings, start article generation, and inspect or tune the agents that do the work.\n\nYou see only the workspace data that your Sitefire account can access. Viewers can read; changing data needs the workspace admin role.",
     "developerName": "Sitefire",
-    "category": "Productivity",
+    "category": "Data & Analytics",
     "capabilities": [
       "Analyze AI visibility and competitor ranking",
       "Find topics and pages that AI models cite",
