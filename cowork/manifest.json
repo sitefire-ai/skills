@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.29/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.29",
+  "version": "1.0.0",
+  "id": "a6122f77-c4b0-53ca-bfb8-336f7524c773",
+  "developer": {
+    "name": "Sitefire",
+    "websiteUrl": "https://sitefire.ai",
+    "privacyUrl": "https://sitefire.ai/data-privacy",
+    "termsOfUseUrl": "https://sitefire.ai/terms"
+  },
+  "name": {
+    "short": "Sitefire",
+    "full": "Sitefire AI Visibility"
+  },
+  "description": {
+    "short": "Track and improve how AI answer engines mention your brand.",
+    "full": "Sitefire measures how AI answer engines such as ChatGPT, Gemini, Perplexity, and Google AI Mode mention and cite your brand. Connect your Sitefire account to ask about your visibility score, trends, citation rate, and competitor ranking; see which topics you win or lose and which of your pages AI models cite; and manage the questions and topics that Sitefire monitors.\n\nSitefire also turns gaps into actions. Each action gets a briefing from Sitefire's analysis agents, with a content outline, page improvements, outreach drafts, or forum posts. You can review briefings, start article generation, and inspect or tune the agents that do the work.\n\nIntended for marketing, SEO, and content teams with a Sitefire account. You see only the workspace data that your account can access. Viewers can read; changing data needs the workspace admin role."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#FB4C02",
+  "agentSkills": [
+    {
+      "folder": "./skills/sitefire"
+    },
+    {
+      "folder": "./skills/sitefire-actions"
+    },
+    {
+      "folder": "./skills/sitefire-discover"
+    },
+    {
+      "folder": "./skills/sitefire-improve-agent"
+    },
+    {
+      "folder": "./skills/sitefire-prompts"
+    },
+    {
+      "folder": "./skills/sitefire-traces"
+    },
+    {
+      "folder": "./skills/sitefire-write-all"
+    }
+  ],
+  "agentConnectors": [
+    {
+      "id": "sitefire",
+      "displayName": "Sitefire",
+      "description": "Sitefire AI visibility data: metrics, topics, prompts, actions, briefings, articles, and agent runs.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://app.sitefire.ai/api/mcp"
+        }
+      }
+    }
+  ]
+}
